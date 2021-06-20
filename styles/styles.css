@@ -1,0 +1,27 @@
+/*
+    This is all just testing. Please ignore the basic looks
+    for the time being!
+*/
+
+body {
+    background-color: rgb(233, 233, 233);
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+
+    margin: auto;
+    height: 300px;
+    width: 300px;
+
+    box-shadow: 5px 5px;
+    border-radius: 25px;
+    padding: 20px;
+    font-style: sans-serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
