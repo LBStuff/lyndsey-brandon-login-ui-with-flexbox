@@ -1,32 +1,46 @@
 /*
     This is all just testing. Please ignore the basic looks
     for the time being!
+
+    Gradient underline effect initially understood from here:
+    https://codepen.io/mildrenben/pen/gbddEj
 */
 
+h1, input::placeholder, button
+{
+    font-family: "Open Sans", sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
 body {
-    background-color: rgb(233, 233, 233);
+    background-color: fbfbfb;
 }
 
 .box {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: space-evenly safe;
-
-    font-family: 'Roboto', Tahoma, Verdana, sans-serif;
+    justify-content: center;
 
     margin: 100px auto 0;
-    width: 400px;
+    width: 450px;
 
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     padding: 20px;
     color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: ffffff;
 }
 
 img {
     display: block;
+    border-radius: 50%;
+
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+
     margin-left: auto;
     margin-right: auto;
     height: 100px;
@@ -35,7 +49,7 @@ img {
 h1 {
     height: 50px;
     width: 100%;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 100%;
     text-align: center;
     font-weight: normal;
@@ -47,12 +61,31 @@ form {
 }
 
 input {
-    margin: 40px 25px;
+    margin: 20px 25px;
     width: 200px;
     display: block;
     border: none;
     padding: 10px 0;
-    border-bottom: solid 1px cornflowerblue;
+
+    border-bottom: solid 1px #1390de;
+    transition: all 0.3s cubic-bezier(.64, .09, .08, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1390de 4%);
+    background-position: -200px 0;
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    color: darken(#1390de, 20%);
+}
+
+input:focus, input:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+}
+
+input:focus, input:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
 }
 
 .no-outline:focus {
@@ -61,7 +94,7 @@ input {
 
 button {
     border: none;
-    background: cornflowerblue;
+    background: #1390de;
     cursor: pointer;
     color: white;
     border-radius: 50px;
@@ -72,8 +105,7 @@ button {
     font-size: 16px;
 }
 
-.button:hover {
-    transition: all 0.5s ease;
+button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2)
 }
