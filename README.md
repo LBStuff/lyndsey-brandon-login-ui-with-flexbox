@@ -14,5 +14,6 @@ A login UI meant to mimic one of the more basic Google login UIs.
 - User icon.
 - The button transforms via the y axis.
 - Gradient lines on the bottom of the input.
+- Dark mode stylesheet and user icon.
 
 Lyndsey Brandon
