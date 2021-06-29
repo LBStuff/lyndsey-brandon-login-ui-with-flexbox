@@ -4,28 +4,36 @@
     Project: Login UI With Flexbox.
     Lyndsey Brandon
     Cohort 216
+
+    Notes: User icon commented out. All stylistic transformations were
+    also commented out for simplicity's sake. To use Dark Mode, darkstyles.css 
+    and usericondark.png can be called from their appropriate folders.
 -->
 
 <html lang="en-US">
+    <!-- Head Information -->
     <head>
+        <!-- Meta Information -->
         <meta charset="utf-8">
-        <title>A Simple Login UI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Stylesheet Links, change to darkstyles.css for Dark Mode -->
         <link rel="stylesheet" href="styles/styles.css">
+
+        <title>A Simple Login UI</title>
     </head>
 
     <body>
-        <div class="box">
+        <div class="container">
             <form>
                 <h1>Sign in</h1>
 
-                <!-- <br><br><img src="images/usericon.png" alt="User icon.">
-                -->        
+                <!-- <img src="images/usericon.png" alt="User icon."> -->
 
-                <br><br><input type="text" class="no-outline" placeholder="username" required="">
+                <input type="text" class="no-outline" placeholder="username" required="">
                 <input type="password" class="no-outline" placeholder="password" required="">
             
-                <br><br><button>Sign in</button>
+                <button>Sign in</button>
             </form>
         </div>
     </body>
