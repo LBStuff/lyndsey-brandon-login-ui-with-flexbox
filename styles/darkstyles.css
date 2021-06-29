@@ -1,7 +1,4 @@
 /*
-    This is all just testing. Please ignore the basic looks
-    for the time being!
-
     Gradient underline effect initially understood from here:
     https://codepen.io/mildrenben/pen/gbddEj
 */
@@ -16,7 +13,7 @@ body {
     background-color: #33313B;
 }
 
-.box {
+.container {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -25,16 +22,19 @@ body {
     min-width: 400px;
     min-height: 400px;
 
-    margin: 100px auto 0;
-    width: 450px;
-    height: 450px;
+    margin: 100px auto;
+    width: 400px;
+    height: 400px;
+
+    /* For the user icon the height MUST be 400px. */
 
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     padding: 20px;
-    color: #E6F5FF;
+	color: #E6F5FF;
     background-color: #3C4F65;
 }
+
 
 img {
     display: block;
@@ -50,45 +50,52 @@ img {
     height: 100px;
 }
 
+
 h1 {
-    height: 50px;
+    height: 20px;
     width: 100%;
     font-size: 24px;
     line-height: 100%;
-    text-align: center;
     font-weight: normal;
+    text-align: center;
+	color: white;
 }
 
-form {
+.form-wrap {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
 input {
     margin: 20px 25px;
-    width: 200px;
-    display: block;
+    width: 250px;
     border: none;
     padding: 10px 0;
 
     border-bottom: solid 1px #834C69;
+
+    /*
+    This is the gradient animation for the bottom
+    of the username/password input.
+    */
+    
     transition: all 0.3s cubic-bezier(.64, .09, .08, 1);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #834C69 4%);
-    background-position: -200px 0;
-    background-size: 200px 100%;
+    background-position: -250px 0;
+    background-size: 250px 100%;
     background-repeat: no-repeat;
     color: darken(#834C69, 20%);
+    
 }
 
 input::placeholder {
-    color: #E6F5FF;
+    color: white;
 }
 
-input:focus, input:valid {
-    box-shadow: none;
-    outline: none;
-    background-position: 0 0;
-}
+/*
+Part of the extra animation for the input.
+*/
 
 input:focus, input:valid {
     box-shadow: none;
@@ -104,14 +111,15 @@ button {
     border: none;
     background: #834C69;
     cursor: pointer;
-    color: #E6F5FF;
+    color: white;
     border-radius: 50px;
     padding: 14px 40px;
-    width: 200px;
-    margin: auto;
+    width: 250px;
+    margin: 15px auto;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     font-size: 16px;
 }
+
 
 button:hover {
     transform: translateY(-3px);
